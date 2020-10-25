@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Textbox from "./components/Textbox.js";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import ButtonGroup, { Button } from "./components/ButtonGroup.js";
 import "./App.css";
 import MarkdownPreview from "./components/MarkdownPreview.js";
-
-
 
 let marked = require("marked");
 const axios = require("axios").default;
@@ -65,14 +62,14 @@ export class App extends Component {
           {/* RST Router */}
           <Route
             path="/rst2html"
-            render={(props) => (
+            render={(props) =>
               MarkdownPreview({
-                conversionHeading: "Convert Text to Markdown",
+                conversionHeading: "Convert Text to ReStructutred Text",
                 parsedText: rsthtml,
                 text: text,
                 updateSourceText: this.updateSourceText,
               })
-            )}
+            }
           />
         </div>
       </Router>
