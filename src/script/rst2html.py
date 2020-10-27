@@ -5,10 +5,14 @@ from io import StringIO
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app)
+app = Flask(__name__, static_folder="../../build", static_url_path="/")
 
-@app.route("/send", methods=["GET", "POST"])
+CORS(app)
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+    
+@app.route("/api/send", methods=["GET", "POST"])
 def send():
     if request.method == "POST":
         text = str(request.json["text"])

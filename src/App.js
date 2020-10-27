@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import ButtonGroup, { Button } from "./components/ButtonGroup.js";
+// import ButtonGroup from "./components/ButtonGroup.js";
 import "./App.css";
 import MarkdownPreview from "./components/MarkdownPreview.js";
-
+import NavBar from "./components/NavBar.js";
 let marked = require("marked");
 const axios = require("axios").default;
 
@@ -22,7 +22,7 @@ export class App extends Component {
   crst = () => {
     axios({
       method: "post",
-      url: "http://localhost:5000/send",
+      url: "http://localhost:3000/api/send",
       headers: { "content-type": "application/json" },
       data: this.state,
     })
@@ -41,8 +41,10 @@ export class App extends Component {
     // const rst =
     return (
       <Router>
-        <ButtonGroup />
-        <div className="container-fluid">
+        {/* <ButtonGroup /> */}
+
+        <NavBar/>
+        <div className="container-fluid" id="invisible">
           <br />
 
           <br />
