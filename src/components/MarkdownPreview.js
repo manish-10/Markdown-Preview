@@ -1,4 +1,5 @@
 import React from "react";
+import ParseSelector from "./ParseSelector";
 import Textbox from './Textbox'
 function MarkdownPreview({
   conversionHeading,
@@ -12,11 +13,13 @@ function MarkdownPreview({
         {conversionHeading}
       </h2>
       <div className="row ">
+      
         <Textbox text={text} updateSourceText={updateSourceText} />
 
         <div className="col-6" id="preview">
           <h2 className="text-center p-2" id="text-area-label">
             See the result:
+            
           </h2>
           <div className="preview rounded">
             <div dangerouslySetInnerHTML={{ __html: parsedText }} />

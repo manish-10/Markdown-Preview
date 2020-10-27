@@ -1,40 +1,39 @@
 body {
-  background-color: #8ecae6;
+  background-color: #262626;
+  color: #f3ecec;
 }
 
-#title{
-  color: #2f3e46;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#title {
+  color: #f3ecec;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   font-size: 60px;
 }
 
-#text-area-label{
+#text-area-label {
+  font-family: "Montserrat", sans-serif;
   font-weight: 650;
   font-size: 35px;
+  color: #f3ecec;
 }
 
+.form-control,
 .preview {
-  padding: 15px;
-}
-
-.form-control:active{
-  background-color: white;
-}
-
-.form-control, .preview{
-  background-color: #f1faee;
+  padding: 8px;
+  background-color: #5e5e5e;
+  color: #f3ecec;
+  font-size: 130%;
   min-height: 75vh;
-  box-shadow: 5px 5px  #a4a9ad;
-  border: solid black;
+  box-shadow: 5px 5px #353535;
 }
 
-img:active{
+img:active {
   transform: scale(8);
   /* height: 100%; */
 }
 
-.literal-block{
+.literal-block {
   background-color: rgb(58, 57, 57);
   color: white;
   padding: 10px;
@@ -42,13 +41,16 @@ img:active{
   border-radius: 8px;
 }
 
-.system-message
-{
+.system-message {
   border-radius: 10px;
   padding: 5px;
   background-color: #e97171;
-  border: inset 3px #ffcb8e ;
+  border: inset 3px #ffcb8e;
 }
-#invisible{
-  background-color: #8ecae6
+
+.nav-link {
+  font-weight: bolder;
+}
+#invisible {
+  background-color: #262626;
 }

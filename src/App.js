@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import ButtonGroup from "./components/ButtonGroup.js";
 import "./App.css";
 import MarkdownPreview from "./components/MarkdownPreview.js";
 import NavBar from "./components/NavBar.js";
+
 let marked = require("marked");
 const axios = require("axios").default;
 
@@ -11,6 +11,7 @@ export class App extends Component {
   state = {
     text: "",
     results: "",
+    srcformat: "",
   };
   updateSourceText = (e) => {
     this.setState({ text: e.target.value }, () => {
@@ -43,12 +44,14 @@ export class App extends Component {
       <Router>
         {/* <ButtonGroup /> */}
 
-        <NavBar/>
+        <NavBar />
         <div className="container-fluid" id="invisible">
           <br />
 
           <br />
+
           {/* Markdown Router */}
+          
           <Route
             path="/md2html"
             render={(props) =>
@@ -66,7 +69,7 @@ export class App extends Component {
             path="/rst2html"
             render={(props) =>
               MarkdownPreview({
-                conversionHeading: "Convert Text to ReStructutred Text",
+                conversionHeading:"Convert Text to ReStructutred Text", 
                 parsedText: rsthtml,
                 text: text,
                 updateSourceText: this.updateSourceText,

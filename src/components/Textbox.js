@@ -12,6 +12,7 @@ export class Textbox extends Component {
                       id="editor"
                       value={this.props.text}
                       onChange={this.props.updateSourceText}
+                      style={{backgroundColor:"#5e5e5e", color:"#f3ecec"}}
                     />
                   </div>
         )
